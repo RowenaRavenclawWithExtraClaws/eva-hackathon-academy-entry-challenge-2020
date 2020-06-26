@@ -1,7 +1,7 @@
 'use strict'
 
 const fs = require('fs');
-const challenge1 = require('./challenge1');
+const challenge1 = require('./challenges');
 
 let rawData = fs.readFileSync('testCases.json');
 let data = JSON.parse(rawData);
