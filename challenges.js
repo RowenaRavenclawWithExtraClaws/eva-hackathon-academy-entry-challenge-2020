@@ -21,7 +21,7 @@ output eg:
 ]
 */
 
-let solution = (arr) => {
+let solution1 = (arr) => {
     let e00 = arr[0][0];
     let e01 = arr[0][1];
     let e02 = arr[0][2];
@@ -44,5 +44,5 @@ let solution = (arr) => {
     return arr;
 }
 
-exports.solveChallenge1 = solution;
+exports.solveChallenge1 = solution1;
 
