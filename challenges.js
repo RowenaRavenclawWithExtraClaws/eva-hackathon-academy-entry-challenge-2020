@@ -130,6 +130,63 @@ let solution3 = (arr) => {
     return arr;
 }
 
+// challenge 4
+/*
+input eg:
+[
+    [0  ,   0,   0]
+    [0,     0, e12]
+    [0  , e21,   0]
+]
+*/
+
+/*
+output eg:
+[
+    [e00, e01, e02]
+    [e10, e11, e12]
+    [e20, e21, e22]
+]
+*/
+
+let solution4 = (arr) => {
+    let e12 = arr[1][2];
+    let e21 = arr[2][1];
+    let e01, e10, e02, e20, e00, e11, e22;
+
+    for (e01 = 1; e01++;) {
+        e10 = e01 + Math.abs(e21 - e12);
+
+        if ((e10 + e21) % 2 != 0)
+            continue;
+
+        e02 = (e10 + e21) / 2;
+        e20 = e02 - Math.abs(e21 - e12);
+
+        if ((e01 + e02 + e10 + e12 + e20 + e21) % 2 != 0)
+            continue;
+
+        sum = (e01 + e02 + e10 + e12 + e20 + e21) / 2
+
+        e00 = sum - (e10 + e20);
+        e11 = sum - (e10 + e12);
+        e22 = sum - (e00 + e11);
+
+        arr[0][0] = e00;
+        arr[0][1] = e01;
+        arr[0][2] = e02;
+        arr[1][0] = e10;
+        arr[1][1] = e11;
+        arr[2][0] = e20;
+        arr[2][2] = e22;
+
+        break;
+    }
+
+    return arr;
+}
+
 exports.solveChallenge1 = solution1;
 exports.solveChallenge2 = solution2;
 exports.solveChallenge3 = solution3;
+exports.solveChallenge4 = solution4;
