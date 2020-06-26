@@ -166,7 +166,7 @@ let solution4 = (arr) => {
         if ((e01 + e02 + e10 + e12 + e20 + e21) % 2 != 0)
             continue;
 
-        sum = (e01 + e02 + e10 + e12 + e20 + e21) / 2
+        let sum = (e01 + e02 + e10 + e12 + e20 + e21) / 2
 
         e00 = sum - (e10 + e20);
         e11 = sum - (e10 + e12);
