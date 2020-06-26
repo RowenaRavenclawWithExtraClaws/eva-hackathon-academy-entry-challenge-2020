@@ -13,3 +13,7 @@ console.log(challenge1.solveChallenge1(arr), '\n');
 arr = data['challenge1']['case2'];
 console.log('solution for challenge 1, test case 2:');
 console.log(challenge1.solveChallenge1(arr), '\n');
+
+arr = data['challenge2']['case1'];
+console.log('solution for challenge 2, test case 1:');
+console.log(challenge1.solveChallenge2(arr), '\n');
