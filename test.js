@@ -25,3 +25,7 @@ console.log(challenge1.solveChallenge3(arr), '\n');
 arr = data['challenge4']['case1'];
 console.log('solution for challenge 4, test case 1:');
 console.log(challenge1.solveChallenge4(arr), '\n');
+
+arr = data['challenge5']['case1'];
+console.log('solution for challenge 5, test case 1:');
+console.log(challenge1.solveChallenge5(arr), '\n');
