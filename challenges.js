@@ -1,7 +1,5 @@
 'use strict'
 
-const { tmpdir } = require("os");
-
 // input should be a 2d-array of size 3 x 3 with entries e00, e01, e02 and e10 has numbers, the rest is 0
 // for eg: e01 is the entry at row 0 and column 1
 
