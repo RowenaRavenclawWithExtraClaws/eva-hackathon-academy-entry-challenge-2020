@@ -1,31 +1,47 @@
 'use strict'
 
 const fs = require('fs');
-const challenge1 = require('./challenges');
+const challenges = require('./challenges');
 
 let rawData = fs.readFileSync('testCases.json');
 let data = JSON.parse(rawData);
 
+function printMat(arr) {
+    arr.forEach(element => {
+        console.log(element);
+    });
+    console.log();
+}
+
 let arr = data['challenge1']['case1'];
 console.log('solution for challenge 1, test case 1:');
-console.log(challenge1.solveChallenge1(arr), '\n');
+let sol = challenges.solveChallenge1(arr);
+printMat(sol);
 
 arr = data['challenge1']['case2'];
 console.log('solution for challenge 1, test case 2:');
-console.log(challenge1.solveChallenge1(arr), '\n');
+sol = challenges.solveChallenge1(arr);
+printMat(sol);
 
 arr = data['challenge2']['case1'];
 console.log('solution for challenge 2, test case 1:');
-console.log(challenge1.solveChallenge2(arr), '\n');
+sol = challenges.solveChallenge2(arr);
+printMat(sol);
 
 arr = data['challenge3']['case1'];
 console.log('solution for challenge 3, test case 1:');
-console.log(challenge1.solveChallenge3(arr), '\n');
+sol = challenges.solveChallenge3(arr);
+printMat(sol);
 
 arr = data['challenge4']['case1'];
 console.log('solution for challenge 4, test case 1:');
-console.log(challenge1.solveChallenge4(arr), '\n');
+sol = challenges.solveChallenge4(arr);
+printMat(sol);
 
 arr = data['challenge5']['case1'];
 console.log('solution for challenge 5, test case 1:');
-console.log(challenge1.solveChallenge5(arr), '\n');
+sol = challenges.solveChallenge5(arr);
+for (let entry in sol) {
+    console.log(entry, ':');
+    printMat(sol[entry]);
+}
